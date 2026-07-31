@@ -4,18 +4,17 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const pool = new Pool({
-    host: 'localhost',
-    port:5432,
-    database:'growgame',
-    user: 'postgres',
-    password:'12345678'
+    connectionString:process.env.DABASE_URL,
+    ssl:{ rejectUnauthorized:false},
+    max:5,
 });
 
-
-pool.connect().then(() => {
-    console.log("conexao realizada com sucess")
-}).catch((erro) => {
-    console.log(`conexao falhou porque: ${erro}`)
+pool.on('connect',()=>{
+    console.log("CONectado com sucesso");
 });
+pool.on('error',(erro:any)=>{
+    console.log("Falha na conexao", erro.message);
+});
+
 
 export default pool;
