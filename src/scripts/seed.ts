@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { pool } from '../database/postgre';
+import pool from '../database/postgre';
 
 
 
