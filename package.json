@@ -8,7 +8,7 @@
     "build": "tsc",
     "db:migrate": "node src/config/database.ts",
     "seed": "ts-node src/scripts/seed.ts",
-    "start": "node dist/index.ts",
+    "start": "node src/index.ts",
     "create:super-admin": "ts-node-dev --transpile-only scripts/createSuperAdmin.ts"
   },
   "dependencies": {
