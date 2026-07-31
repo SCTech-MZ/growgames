@@ -1,0 +1,43 @@
+.page-section{
+    display: none;
+}
+.page-section:active{
+    display: block;
+}
+.energy-meter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+}
+.energy-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid var(--card-border);
+    transition: 0.3s ease;
+}
+.energy-circle.low{
+    border-color: var(--danger);
+    color: var(--danger);
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+.energy-circle.mid{
+    border-color: var(--warning);
+    color: var(--warning);
+}
+.energy-circle.good{
+    border-color: var(--accent);
+    color: var(--accent);
+}

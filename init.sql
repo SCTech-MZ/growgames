@@ -1,0 +1,66 @@
+-- CREATE TABLE aparelhos(
+--     id                  SERIAL PRIMARY KEY,
+--     nome                VARCHAR(100) NOT NULL,
+--     tipo                VARCHAR(50),
+--     status              VARCHAR(20)  DEFAULT 'ok',
+--     ultima_manutencao   DATE,
+--     precisa_manutencao  BOOLEAN DEFAULT false,
+--     observacao          text,
+--     uso_hoje            INTEGER DEFAULT 0,
+--     created_at          TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE TABLE energia(
+--     id                  SERIAL PRIMARY KEY,
+--     numero_contador     VARCHAR(50) UNIQUE,
+--     total_disponivel_kwh DECIMAL(10,2) NOT NULL,
+--     consumo_diario_kwh  DECIMAL(10,2) NOT NULL,
+--     created_at          TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE TABLE recarga_energia(
+--     id                  SERIAL PRIMARY KEY,
+--     data                DATE CURRENT_DATE,
+--     valor_kwh           DECIMAL(10,2) NOT NULL,
+--     valor_pago          DECIMAL(10,2) NOT NULL,
+--     created_at          TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE TABLE jogos_do_dia(
+--     id                  SERIAL PRIMARY KEY,
+--     jogo                VARCHAR(140) NOT NULL,
+--     quantidade          INTEGER NOT NULL,
+--     valor_por_jogo      DECIMAL(10,2) NOT NULL,
+--     total               DECIMAL(10,2) GENERATED ALWAYS AS (quantidade * valor_por_jogo) STORED,
+--     data                DATE DEFAULT CURRENT_DATE,
+--     created_at          TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE TABLE ganhos_diarios(
+--     data                DATE PRIMARY KEY,
+--     total               DECIMAL(10,2) NOT NULL
+-- );
+
+-- CREATE TABLE notificacoes(
+--     id                  SERIAL PRIMARY KEY,
+--     mensagem            TEXT NOT NULL,
+--     tipo                VARCHAR(20) DEFAULT 'info',
+--     lida                BOOLEAN  DEFAULT false,
+--     data_criacao        TIMESTAMPTZ DEFAULT NOW()
+-- );
+-- CREATE TABLE atividade_recente(
+--     id                  SERIAL PRIMARY KEY,
+--     acao                TEXT NOT NULL,
+--     perfil              VARCHAR(50),
+--     data_criacao        TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE TABLE USUARIOS(
+--     id SERIAL PRIMARY KEY,
+--     nome VARCHAR(100) NOT NULL,
+--     email VARCHAR(150) UNIQUE NOT NULL,
+--     senha_hash  VARCHAR(255) NOT NULL,
+--     perfil      VARCHAR(10) CHECK(perfil IN('admin','super')) NOT NULL,
+--     ativo BOOLEAN DEFAULT true,
+--     criado_em   TIMESTAMPTZ DEFAULT NOW()
+-- )
