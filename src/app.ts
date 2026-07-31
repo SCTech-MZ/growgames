@@ -69,24 +69,6 @@ app.locals.services = {
   atividadeservice,
 };
 
-
-
-// app.get("/", (req, res) => {
-//   res.json({
-//     mensagem: "Grow games API",
-//     status: "online",
-//     endpoints: {
-//       auth: "/api/auth/login",
-//       aparelhos: "/api/aparelhos",
-//       energia: "/api/energia",
-//       jogos: "/api/jogos",
-//       financeiro: "/api/financeiro",
-//       notificacoes: "/api/notificacoes",
-//     },
-//   });
-// });
-
-
 // rotas
 app.use("/api", routes);
 
