@@ -2,14 +2,6 @@ import { NextFunction,Request,Response } from "express";
 
 
 export function ErrorHandler(erro: any, req: Request, res: Response, next: NextFunction) {
-    console.error('erro:', erro.message);
-    // teste para remocao do erro 500
-    console.error('erro:', erro.stack);
-    console.error('stack:', erro.stack);
-    console.error('Rota:', req.method,req.originalUrl);
-    console.error('Body:', JSON.stringify(req.body, null,2));
-    console.error('Query:', JSON.stringify(req.query, null,2));
-    console.error('Params:', JSON.stringify(req.params, null, 2));
     
     if (erro.code === '23505') {
         return res.status(409).json({ erro: 'Registo duplicado', detalhe: erro.detail });
