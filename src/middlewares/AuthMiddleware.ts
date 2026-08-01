@@ -8,7 +8,7 @@ interface TokenPayLoad{
     perfil: 'admin' | 'super';
 }
 
-const JWT_SECRET = process.env.JWT_SECRET || 'hipersecret';
+const JWT_SECRET = process.env.JWT_SECRET || 'growgamesecret';
 
 export function AuthMiddleware(req: Request, res: Response, next: NextFunction) {
     const authHeader = req.headers.authorization;
