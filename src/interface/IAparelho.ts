@@ -9,10 +9,3 @@ export interface IAparelho{
     uso_hoje?: number;
     created_at?: string;
 }
-// export interface IAparelho<T>{
-//     findAll(): Promise<T[]>;
-//     findById(id: number): Promise<T | null>;
-//     create(dados: Partial<T>): Promise<T>;
-//     update(id: number,data:Partial<T>): Promise<T>;
-//     delete(id: number): Promise<void>;
-// }
