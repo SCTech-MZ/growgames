@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const aparelhoRoute_1 = __importDefault(require("./aparelhoRoute"));
+const energiRouter_1 = __importDefault(require("./energiRouter"));
+const financeiroRouter_1 = __importDefault(require("./financeiroRouter"));
+const jogoRouter_1 = __importDefault(require("./jogoRouter"));
+const notificacoesRouter_1 = __importDefault(require("./notificacoesRouter"));
+const authRouter_1 = __importDefault(require("./authRouter"));
+const router = (0, express_1.Router)();
+router.use('/auth', authRouter_1.default);
+router.use('/aparelhos', aparelhoRoute_1.default);
+router.use('/energia', energiRouter_1.default);
+router.use('/financeiro', financeiroRouter_1.default);
+router.use('/jogos', jogoRouter_1.default);
+router.use('/notificacoes', notificacoesRouter_1.default);
+exports.default = router;

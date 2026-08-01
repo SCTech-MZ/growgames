@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Games - Gestão de Lan House</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <!-- ==================== LOGIN ==================== -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-card">
+            <div class="login-logo">GG</div>
+            <h2>Grow Games</h2>
+            <p class="subtitle">Painel de Gestão</p>
+            <div class="profile-select">
+                <button class="profile-option" data-profile="admin" id="optAdmin">
+                     Admin<br><small style="font-size:10px;color:#94a3b8;">Funcionário</small>
+                </button>
+                <button class="profile-option" data-profile="super" id="optSuper">
+                     Super Admin<br><small style="font-size:10px;color:#94a3b8;">Dono</small>
+                </button>
+            </div>
+            <button class="btn-login" id="btnLogin" disabled>Entrar</button>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST CONTAINER ==================== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ==================== MODAL OVERLAY ==================== -->
+    <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- ==================== MAIN APP ==================== -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">GG</div>
+            <div class="logo-text">Grow Games<small>Lan House</small></div>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <button data-page="dashboard" class="active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                <span>Dashboard</span>
+            </button>
+            <button data-page="aparelhos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Aparelhos</span>
+            </button>
+            <button data-page="energia">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span>Energia</span>
+            </button>
+            <button data-page="jogos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="14.31" y1="8" x2="20.05" y2="17.94"/><line x1="9.69" y1="8" x2="3.95" y2="17.94"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+                <span>Jogos</span>
+            </button>
+            <button data-page="financeiro">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Financeiro</span>
+            </button>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="avatar" id="sidebarAvatar">SA</div>
+            <div class="user-info">
+                <div class="name" id="sidebarName">Super Admin</div>
+                <div class="role" id="sidebarRole">Dono</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="mainApp" style="display:none;">
+        <div class="header">
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="header-actions">
+                <button class="notification-bell" id="notifBell" title="Notificações">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <span class="badge hidden" id="notifBadge">0</span>
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="handleLogout()">Sair</button>
+            </div>
+        </div>
+        <div class="content-area" id="contentArea">
+            <!-- Pages will be rendered here dynamically -->
+        </div>
+    </div>
+    <div class="teste"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

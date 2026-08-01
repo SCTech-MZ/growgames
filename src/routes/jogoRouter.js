@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const jogoController_1 = require("../controllers/jogoController");
+const AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+const router = (0, express_1.Router)();
+const controller = new jogoController_1.jogoController();
+router.get("/", AuthMiddleware_1.AuthMiddleware, controller.listarPorData.bind(controller));
+router.post("/", AuthMiddleware_1.AuthMiddleware, controller.registrar.bind(controller));
+router.delete("/:id", AuthMiddleware_1.AuthMiddleware, controller.remover.bind(controller));
+router.get("/total", AuthMiddleware_1.AuthMiddleware, controller.totalDia.bind(controller));
+router.get("/ganhos-agrupados", AuthMiddleware_1.AuthMiddleware, controller.ganhosAgrupados.bind(controller));
+exports.default = router;

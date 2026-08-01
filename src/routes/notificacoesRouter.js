@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const notificacaoController_1 = require("../controllers/notificacaoController");
+const AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+const router = (0, express_1.Router)();
+const controller = new notificacaoController_1.NotificacaoController();
+router.get("/", AuthMiddleware_1.AuthMiddleware, controller.listar.bind(controller));
+router.put("/marcar-lidas", AuthMiddleware_1.AuthMiddleware, controller.marcartodascomolidas.bind(controller));
+router.get("/contagem", AuthMiddleware_1.AuthMiddleware, controller.contarNaoLidas.bind(controller));
+exports.default = router;

@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const financeiroController_1 = require("../controllers/financeiroController");
+const AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+const router = (0, express_1.Router)();
+const controller = new financeiroController_1.FinanceiroController();
+router.get("/dia", AuthMiddleware_1.AuthMiddleware, controller.ganhoDia.bind(controller));
+router.get("/semana", AuthMiddleware_1.AuthMiddleware, controller.ganhoSemana.bind(controller));
+router.get("/mes", AuthMiddleware_1.AuthMiddleware, controller.ganhoMes.bind(controller));
+router.get("/historico", AuthMiddleware_1.AuthMiddleware, controller.historico.bind(controller));
+exports.default = router;

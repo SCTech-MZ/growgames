@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const energiacontroller_1 = require("../controllers/energiacontroller");
+const AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+const router = (0, express_1.Router)();
+const controller = new energiacontroller_1.EnergiaController();
+router.get("/configuracao", AuthMiddleware_1.AuthMiddleware, controller.obterConfiguracao.bind(controller));
+router.put("/contador", AuthMiddleware_1.AuthMiddleware, controller.atualizarContador.bind(controller));
+router.post("/recargas", AuthMiddleware_1.AuthMiddleware, AuthMiddleware_1.superAdminOnly, controller.registarRecarga.bind(controller));
+router.get("/recargas", AuthMiddleware_1.AuthMiddleware, controller.listarRecargas.bind(controller));
+router.get("/restante", AuthMiddleware_1.AuthMiddleware, controller.energiaRestante.bind(controller));
+router.put("/definir-total", AuthMiddleware_1.AuthMiddleware, controller.definirTotalDisponivel.bind(controller));
+exports.default = router;

@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const AparelhoController_1 = require("../controllers/AparelhoController");
+const AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+const router = (0, express_1.Router)();
+const controller = new AparelhoController_1.AparelhoController();
+router.get("/", AuthMiddleware_1.AuthMiddleware, (req, res, next) => controller.listar(req, res, next));
+router.get("/:id", AuthMiddleware_1.AuthMiddleware, (req, res, next) => controller.BuscarPorId(req, res, next));
+router.post("/", AuthMiddleware_1.AuthMiddleware, AuthMiddleware_1.superAdminOnly, (req, res, next) => controller.create(req, res, next));
+router.put("/:id", AuthMiddleware_1.AuthMiddleware, (req, res, next) => controller.update(req, res, next));
+router.delete("/:id", AuthMiddleware_1.AuthMiddleware, AuthMiddleware_1.superAdminOnly, (req, res, next) => controller.remover(req, res, next));
+exports.default = router;
