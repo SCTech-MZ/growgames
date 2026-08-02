@@ -28,7 +28,6 @@ export class AparelhoController{
         }
     }
     //post /api/aparelhos(apenas super admin tem acess =[asata])
-    // async create(req: Request, res: Response, next: NextFunction):Promise<IAparelho>{
     async create(req: Request, res: Response, next: NextFunction){
         try {
             const service = req.app.locals.services.aparelhoservice;

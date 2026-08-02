@@ -1,5 +1,3 @@
-import express from "express";
-import cors from 'cors';
 import { config } from "dotenv";
 import pool  from "./database/postgre.js";
 import app from './app.js';

@@ -25,7 +25,6 @@ async function fazerLogin() {
               data.erro ||
                 "Erro ao fazer login verifique seus dados e tente novamente",
               );
-              localStorage.setItem('!res.ok',data.erro)
           }
 
           sessionStorage.setItem("token", data.token);
@@ -39,7 +38,6 @@ async function fazerLogin() {
             window.location.href = "admin/dashboard.html";
           }
         } catch (erro) {
-            localStorage.setItem('catcherror',erro.message)
           errorMsg.textContent =
             erro.message || "Erro de conexao. Tente novamente.";
           errorMsg.classList.add("show");
@@ -60,14 +58,3 @@ const btnLogin = document.getElementById("btnLogin").addEventListener('click', (
     fazerLogin();
 })    
     
-// (function () {
-// const token = sessionStorage.getItem('token');
-// const perfil = sessionStorage.getItem('perfil');
-//     if (token && perfil) {
-//         if (perfil === "super") {
-//             window.location.href = "superAdmin/dashboard.html";
-//         } else {
-//             window.location.href = "admin/dashboard.html";
-//         }
-//     }
-// })();

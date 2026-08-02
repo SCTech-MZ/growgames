@@ -28,14 +28,12 @@ async function handleResponse(response) {
     throw new Error(error.erro || "Erro na requisição");
   }
   if (response.status === 204) {
-    // console.log("mjnkj")
     return null;
   }
   try {
     return response.json();
     
   } catch (erro) {
-    console.error("Resposta invalida do back")
     throw new Error("Resposta invalida do back");
   }
 }
@@ -131,13 +129,6 @@ const api = {
     return data.restante;
   },
 
-  // Jogos
-  // async getJogosTotal(data) {
-  //   const response = await fetch(`${Api_base}/jogos/total?data=${data}`, {
-  //     headers: getHeaders()
-  //   });
-  //   return handleResponse(response);
-  // },
   async getJogos(data) {
     const response = await fetch(`${Api_base}/jogos?data=${data}`, {
       headers: getHeaders(),

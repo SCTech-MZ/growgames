@@ -652,13 +652,13 @@ function showToast(mensagem, tipo = 'info') {
     const container = document.getElementById('toastContainer');
     const toast = document.createElement('div');
     toast.className = `toast toast-${tipo}`;
-    const icones = {
-      success: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`,
-      warning: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`,
-      danger: '',
-      info: ``,
-    };
-    toast.innerHTML = `<span>${icones[tipo] || `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`}</span> ${mensagem}`;
+        const icones = {
+          success: "✅",
+          warning: "⚠️",
+          danger: "🔴",
+          info: "ℹ️",
+        };
+    toast.innerHTML = `<span>${icones[tipo] || "ℹ️"}</span> ${mensagem}`;
     container.appendChild(toast);
     setTimeout(() => {
         toast.style.opacity = '0';

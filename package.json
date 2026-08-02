@@ -18,7 +18,7 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev dist/index.js",
     "build": "tsc",
     "db:migrate": "node src/config/database.ts",
     "seed": "ts-node src/scripts/seed.ts",

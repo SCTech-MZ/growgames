@@ -400,7 +400,6 @@ async function carregarEnergia() {
             api.getEnergiaRestante()
         ]);
 
-        console.log(energia.total_disponivel_kwh,recargas)
 
         if (restante === null) {
             showToast(restante)
