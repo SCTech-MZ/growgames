@@ -1,8 +1,8 @@
-import { IJogo } from "../interface/IJogo";
-import { GanhoDiarioRepository } from "../repositories/ganhoDiarioRepositorio";
-import { JogoRepository } from "../repositories/jogoReoisitory";
-import { AtividadeService } from "./atividadeService";
-import { NotificacaoService } from "./notificacaoService";
+import { IJogo } from "../interface/IJogo.js";
+import { GanhoDiarioRepository } from "../repositories/ganhoDiarioRepositorio.js";
+import { JogoRepository } from "../repositories/jogoReoisitory.js";
+import { AtividadeService } from "./atividadeService.js";
+import { NotificacaoService } from "./notificacaoService.js";
 
 export class JogoService{
     constructor(

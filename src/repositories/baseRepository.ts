@@ -1,6 +1,6 @@
 import { QueryResult } from "pg";
-import pool  from "../database/postgre";
-import { IRepository } from "../interface/Irepositoey";
+import pool  from "../database/postgre.js";
+import { IRepository } from "../interface/Irepositoey.js";
 
 export abstract class BaseRepository<T> implements IRepository<T>{
     protected tableName: string;

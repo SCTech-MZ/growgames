@@ -1,5 +1,5 @@
-import { GanhoDiarioRepository } from "../repositories/ganhoDiarioRepositorio";
-import { JogoRepository } from "../repositories/jogoReoisitory";
+import { GanhoDiarioRepository } from "../repositories/ganhoDiarioRepositorio.js";
+import { JogoRepository } from "../repositories/jogoReoisitory.js";
 
 export class FinanceiroService{
     constructor(private ganhoDiarioREpo:GanhoDiarioRepository,private jogoRepo:JogoRepository){}

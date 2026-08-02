@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { AparelhoService } from "../services/AparelhoService";
-import { IAparelho } from "../interface/IAparelho";
+import { AparelhoService } from "../services/AparelhoService.js";
+import { IAparelho } from "../interface/IAparelho.js";
 
 export class AparelhoController{
 

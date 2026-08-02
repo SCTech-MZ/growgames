@@ -1,6 +1,6 @@
-import pool from "../database/postgre";
-import { IJogo } from "../interface/IJogo";
-import { BaseRepository } from "./baseRepository";
+import pool from "../database/postgre.js";
+import { IJogo } from "../interface/IJogo.js";
+import { BaseRepository } from "./baseRepository.js";
 
 
 export class JogoRepository extends BaseRepository<IJogo>{

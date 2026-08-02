@@ -1,9 +1,9 @@
-import { IEnergia } from "../interface/IEnergia";
-import { IRecarga } from "../interface/IRecarga";
-import { EnergiaRepository } from "../repositories/energiaRepository";
-import { RecargaRepository } from "../repositories/RecargaRepository";
-import { AtividadeService } from "./atividadeService";
-import { NotificacaoService } from "./notificacaoService";
+import { IEnergia } from "../interface/IEnergia.js";
+import { IRecarga } from "../interface/IRecarga.js";
+import { EnergiaRepository } from "../repositories/energiaRepository.js";
+import { RecargaRepository } from "../repositories/RecargaRepository.js";
+import { AtividadeService } from "./atividadeService.js";
+import { NotificacaoService } from "./notificacaoService.js";
 
 
 export class EnergiaService{

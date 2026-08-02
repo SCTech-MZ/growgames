@@ -1,15 +1,25 @@
 {
   "name": "grow-games-lanhouse",
   "version": "1.0.0",
-  "description": "Sistema de comunicacao interna entre Super Admin e Admins - Grow Games LAN House",
-  "main": "dist/server.ts",
-  "type": "module", 
+  "description": "Sistema de comunicacao interna entre Super Admin e Admins - Grow Games Lan House",
+  "homepage": "https://github.com/SCTech-MZ/growgames#readme",
+  "bugs": {
+    "url": "https://github.com/SCTech-MZ/growgames/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCTech-MZ/growgames.git"
+  },
+  "license": "MIT",
+  "author": "silviocustodiotech",
+  "main": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
     "build": "tsc",
     "db:migrate": "node src/config/database.ts",
     "seed": "ts-node src/scripts/seed.ts",
-    "start": "node src/index.ts",
+    "start": "node src/index.js",
     "create:super-admin": "ts-node-dev --transpile-only scripts/createSuperAdmin.ts"
   },
   "dependencies": {

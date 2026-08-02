@@ -1,6 +1,6 @@
-import pool from "../database/postgre";
-import { IAtividadeRecente } from "../interface/IAtividadeRecente";
-import { BaseRepository } from "./baseRepository";
+import pool from "../database/postgre.js";
+import { IAtividadeRecente } from "../interface/IAtividadeRecente.js";
+import { BaseRepository } from "./baseRepository.js";
 
 
 export class AtividadeRecenteRepository extends BaseRepository<IAtividadeRecente>{

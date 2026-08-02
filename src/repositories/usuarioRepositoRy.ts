@@ -1,5 +1,5 @@
-import pool from "../database/postgre";
-import { IUsuario } from "../interface/IUsuario";
+import pool from "../database/postgre.js";
+import { IUsuario } from "../interface/IUsuario.js";
 
 
 export class UsuarioRepository{

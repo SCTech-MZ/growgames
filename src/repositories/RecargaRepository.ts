@@ -1,6 +1,6 @@
-import pool  from "../database/postgre";
-import { IRecarga } from "../interface/IRecarga";
-import { BaseRepository } from "./baseRepository";
+import pool  from "../database/postgre.js";
+import { IRecarga } from "../interface/IRecarga.js";
+import { BaseRepository } from "./baseRepository.js";
 
 
 export class RecargaRepository extends BaseRepository<IRecarga>{

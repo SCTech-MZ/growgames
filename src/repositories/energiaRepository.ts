@@ -1,5 +1,5 @@
-import pool  from "../database/postgre";
-import { IEnergia } from "../interface/IEnergia";
+import pool  from "../database/postgre.js";
+import { IEnergia } from "../interface/IEnergia.js";
 
 
 export class EnergiaRepository {

@@ -1,5 +1,5 @@
-import { IAtividadeRecente } from "../interface/IAtividadeRecente";
-import { AtividadeRecenteRepository } from "../repositories/atividadeRecenteRepository";
+import { IAtividadeRecente } from "../interface/IAtividadeRecente.js";
+import { AtividadeRecenteRepository } from "../repositories/atividadeRecenteRepository.js";
 
 
 export class AtividadeService{

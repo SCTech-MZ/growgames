@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { jogoController } from "../controllers/jogoController";
-import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { jogoController } from "../controllers/jogoController.js";
+import { AuthMiddleware } from "../middlewares/AuthMiddleware.js";
 
 const router = Router();
 const controller = new jogoController();

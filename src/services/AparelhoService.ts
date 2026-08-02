@@ -1,7 +1,7 @@
-import { IAparelho } from "../interface/IAparelho";
-import { AparelhoRepository } from "../repositories/aparelhoRepository";
-import { AtividadeService } from "./atividadeService";
-import { NotificacaoService } from "./notificacaoService";
+import { IAparelho } from "../interface/IAparelho.js";
+import { AparelhoRepository } from "../repositories/aparelhoRepository.js";
+import { AtividadeService } from "./atividadeService.js";
+import { NotificacaoService } from "./notificacaoService.js";
 
 
 export class AparelhoService{

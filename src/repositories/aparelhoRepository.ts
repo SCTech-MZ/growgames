@@ -1,6 +1,6 @@
-import pool  from "../database/postgre";
-import { IAparelho } from "../interface/IAparelho";
-import { BaseRepository } from "./baseRepository";
+import pool  from "../database/postgre.js";
+import { IAparelho } from "../interface/IAparelho.js";
+import { BaseRepository } from "./baseRepository.js";
 
 
 export class AparelhoRepository extends BaseRepository<IAparelho>{

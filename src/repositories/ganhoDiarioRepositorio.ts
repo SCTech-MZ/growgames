@@ -1,5 +1,5 @@
-import pool from "../database/postgre";
-import { IGanhoDiario } from "../interface/IGanhoDiario";
+import pool from "../database/postgre.js";
+import { IGanhoDiario } from "../interface/IGanhoDiario.js";
 
 
 export class GanhoDiarioRepository {

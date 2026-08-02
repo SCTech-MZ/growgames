@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import  Jwt  from "jsonwebtoken";
-import { userPayLoad } from "../interface/user.interface";
+import { userPayLoad } from "../interface/user.interface.js";
 
 interface TokenPayLoad{
     id: number;

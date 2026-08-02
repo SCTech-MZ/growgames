@@ -1,5 +1,5 @@
-import { INotifcacao } from "../interface/INotificacao";
-import { notificacaoRepository } from "../repositories/NotificacaoRepository";
+import { INotifcacao } from "../interface/INotificacao.js";
+import { notificacaoRepository } from "../repositories/NotificacaoRepository.js";
 
 export class NotificacaoService {
   constructor(private notificacaoRepo: notificacaoRepository) {}

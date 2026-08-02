@@ -1,6 +1,6 @@
 import bycript from 'bcrypt'
 import Jwt from 'jsonwebtoken'
-import { UsuarioRepository } from '../repositories/usuarioRepositoRy'
+import { UsuarioRepository } from '../repositories/usuarioRepositoRy.js'
 
 
 export class AuthUserService{

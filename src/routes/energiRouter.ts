@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { EnergiaController } from "../controllers/energiacontroller";
-import { AuthMiddleware, superAdminOnly } from "../middlewares/AuthMiddleware";
+import { EnergiaController } from "../controllers/energiacontroller.js";
+import { AuthMiddleware, superAdminOnly } from "../middlewares/AuthMiddleware.js";
 
 const router = Router();
 const controller = new EnergiaController();

@@ -1,6 +1,6 @@
-import pool from "../database/postgre";
-import { INotifcacao } from "../interface/INotificacao";
-import { BaseRepository } from "./baseRepository";
+import pool from "../database/postgre.js";
+import { INotifcacao } from "../interface/INotificacao.js";
+import { BaseRepository } from "./baseRepository.js";
 
 
 export class notificacaoRepository extends BaseRepository<INotifcacao>{

@@ -1,6 +1,6 @@
 import { Router,Request,Response,NextFunction } from "express";
-import { AparelhoController } from "../controllers/AparelhoController";
-import { AuthMiddleware, superAdminOnly } from "../middlewares/AuthMiddleware";
+import { AparelhoController } from "../controllers/AparelhoController.js";
+import { AuthMiddleware, superAdminOnly } from "../middlewares/AuthMiddleware.js";
 
 const router = Router();
 
