@@ -10,7 +10,7 @@ const pool = new Pool({
 });
 
 pool.on('connect',()=>{
-    console.log("CONectado com sucesso");
+    console.log("Conectado com sucesso");
 });
 pool.on('error',(erro:any)=>{
     console.log("Falha na conexao", erro.message);
