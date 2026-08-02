@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema de comunicacao interna entre Super Admin e Admins - Grow Games LAN House",
   "main": "dist/server.ts",
+  "type": "module", 
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
