@@ -1,4 +1,4 @@
-const Api_base = "https://growgames.onrender.com";
+const Api_base = "https://growgames.onrender.com/api";
 
 function getToken() {
   return sessionStorage.getItem("token");
