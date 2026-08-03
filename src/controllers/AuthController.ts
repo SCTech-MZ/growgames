@@ -65,7 +65,7 @@ export class AuthController{
                 return res.status(400).json({erro:"A senha deve conter pelo menos 6 caracteres."})
             }
 
-            const usuarioService = req.app.locals.usuarioAuthservice;
+            const usuarioService = req.app.locals.services.usuarioAuthservice;
 
             const novoUsuario = await usuarioService.cadastrar({ nome, email, senha, perfil });
 
