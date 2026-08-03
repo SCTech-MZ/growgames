@@ -5,6 +5,8 @@ async function Cadastrar() {
   const btnLogin = document.getElementById("btnLogin");
   let errorMsg = document.getElementById("errorMsg");
 
+  const perfil = "super";
+
   errorMsg.classList.remove("show");
   errorMsg.textContent = "";
   if (!email || !senha) {
@@ -17,7 +19,7 @@ async function Cadastrar() {
     const res = await fetch(`${Api_base}/auth/cadastrar`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nome, email, senha }),
+      body: JSON.stringify({ nome, email, senha,perfil }),
     });
     const data = await res.json();
 
