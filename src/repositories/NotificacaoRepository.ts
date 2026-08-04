@@ -8,6 +8,11 @@ export class notificacaoRepository extends BaseRepository<INotifcacao>{
         super('notificacoes')
     }
 
+    async findAll(): Promise<INotifcacao[]> {
+        const {rows} = await pool.query('SELECT * FROM notificacoes ORDER BY data_criacao DESC');
+        return rows;
+    }
+
     async findNaoLidas(): Promise<INotifcacao[]>{
         const { rows } = await pool.query('SELECT * FROM notificacoes SET lida = false ORDER BY data_criacao DESC');
         return rows;

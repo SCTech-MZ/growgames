@@ -5,14 +5,18 @@ export class NotificacaoService {
   constructor(private notificacaoRepo: notificacaoRepository) {}
 
   async criar(mensagem: string, tipo: "info" | "alerta" | "perigo" = "info") {
-    return this.notificacaoRepo.create({ mensagem, tipo: "info", lida: false });
+    return this.notificacaoRepo.create({
+      mensagem,
+      tipo: "info",
+      lida: false,
+    } as any);
   }
 
-  async markAllASLidas(): Promise<void> {
+  async marcartodascomolidas(): Promise<void> {
     await this.notificacaoRepo.marcartodascomolidas();
   }
 
-  async listarNaoLidas(): Promise<INotifcacao[]> {
+  async findNaoLidas(): Promise<INotifcacao[]> {
     return this.notificacaoRepo.findNaoLidas();
   }
 
