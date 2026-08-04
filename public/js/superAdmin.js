@@ -84,6 +84,7 @@ document.querySelector('.sidebar-nav').addEventListener('click', (e) => {
         case 'energia': carregarEnergia(); break;
         case 'jogos': carregarJogos(); break;
         case 'financeiro': carregarFinanceiro(); break;
+        case 'user': window.location.href = "../superAdmin/register.html";
     }
     document.getElementById('pageTitle').textContent = link.textContent.trim();
 });
