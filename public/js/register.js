@@ -5,7 +5,7 @@ async function Cadastrar() {
   const btnLogin = document.getElementById("btnLogin");
   let errorMsg = document.getElementById("errorMsg");
 
-  const perfil = "super";
+  const perfil = "admin";
 
   errorMsg.classList.remove("show");
   errorMsg.textContent = "";
@@ -29,7 +29,7 @@ async function Cadastrar() {
           "Erro ao cadastrar tente novamente",
       );
     }
-    window.location.href = "../index.html";
+    window.location.href = "../superAdmin/dashboard.html";
   } catch (erro) {
     errorMsg.textContent = erro.message || "Erro de conexao. Tente novamente.";
     errorMsg.classList.add("show");

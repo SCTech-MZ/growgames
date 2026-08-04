@@ -57,7 +57,7 @@ export class AuthController{
                 return res.status(400).json({ erro: "Nome.email,senha e perfil sao obrigatorios." });
             }
             
-            if (!['admin', 'super'].includes(perfil)) {
+            if (!['admin'].includes(perfil)) {
                 return res.status(400).json({ erro: "Perfil deve ser especificado." });
             }
 
